@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    {% block head %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>我的博客</title>
+        <link rel="icon" href="{{ url_for('static', filename='chuangzuo.svg') }}">
+    {% endblock head %}
+</head>
+<body>
+{% block nav %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+
+        </div>
+    </nav>
+{% endblock nav %}
+
+<div class="container">
+    {% block content %}
+    Hello World
+    {% endblock content %}
+    {% block footer %}
+        <footer>
+            <p class="float-left">
+                <small> &copy; 2019 <a href="http://redhong.com" title="Written by Little Guoguo">Grey Li</a> -
+                    <a href="https://github.com/guohongchuan/blog" title="Fork me on GitHub">GitHub</a>
+                </small>
+            </p>
+        </footer>
+    {% endblock footer %}
+</div>
+
+{% block scripts %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.2.1.slim.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+{% endblock %}
+</body>
+</html>
